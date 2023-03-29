@@ -21,10 +21,11 @@ export const Main: React.FC = () => {
     getStars(userName)
     getRepos(userName)
     getSeeMore("")
+    setUserName("")
   }
   
   return (
-    <div className={`${seeMore.length === 0 ? "h-screen max-sm:h-screen": "h-full max-sm:h-max"} w-full mx-auto mb-12 p-2 flex flex-col items-center gap-y-8`}>
+    <div className={`${seeMore.length === 0 ? "h-screen max-sm:h-max mb-12": "h-full max-sm:h-max"} w-full mx-auto p-2 flex flex-col items-center gap-y-8`}>
       <div className="w-full flex justify-center">
         <input
           className="inputName p-1 w-1/2 max-sm:w-64" 
