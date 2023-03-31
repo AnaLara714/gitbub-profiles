@@ -25,7 +25,7 @@ export const Main: React.FC = () => {
   }
   
   return (
-    <div className={`${seeMore.length === 0 ? "h-screen max-sm:h-max mb-12": "h-full max-sm:h-max"} w-full mx-auto p-2 flex flex-col items-center gap-y-8`}>
+    <div className={`${seeMore.length === 0 ? "max-sm:h-max mb-12": "max-sm:h-max mb-8"} ${seeMore.length >= 15 ? "h-max" : "h-screen"} w-full mx-auto p-2 flex flex-col items-center gap-y-8`}>
       <div className="w-full flex justify-center">
         <input
           className="inputName p-1 w-1/2 max-sm:w-64" 

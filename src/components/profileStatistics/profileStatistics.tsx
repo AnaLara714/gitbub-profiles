@@ -38,7 +38,7 @@ export const ProfileStatistics: React.FC = () => {
         <label className="cursor-pointer">Seguindo</label> 
         <label className="flex flex-row gap-x-2 cursor-pointer">
           {user?.following}
-          <img src={darkMode ? DarkOn : DarkOff}onClick={SeeMoreFollowing}/>
+          <img src={darkMode ? DarkOn : DarkOff} onClick={SeeMoreFollowing}/>
         </label>
       </span>
       <span className="flex justify-between cursor-pointer">

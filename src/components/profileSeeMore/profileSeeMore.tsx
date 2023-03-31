@@ -30,8 +30,9 @@ export const ProfileSeeMore: React.FC = () => {
               <a href={infos.html_url} target="_blank" className="break-all"> 
                 • {infos.name}
               </a>
-              : <label className="cursor-pointer" onClick={() => open(infos.login)}> 
-              • {infos.login}
+              : <label className="cursor-pointer flex flex-row gap-x-2 mt-2" onClick={() => open(infos.login)}> 
+                  <img src={infos.avatar_url} 
+                    className="rounded-full w-6" alt="foto do perfil do github" /> {infos.login}
                 </label>
               }
           </>))
