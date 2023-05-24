@@ -1,20 +1,21 @@
-import React, { createContext } from 'react';
+import React from "react";
 
 interface IThemeChange {
   darkMode: boolean;
   toogleDarkMode: () => void;
 };
 
-interface IThemeChangeProviderProps {
+interface IThemeChangeProvider {
   children: React.ReactNode;
-}
+};
+
 export const ThemeChangeContext = React.createContext<IThemeChange>({} as IThemeChange, );
 
-export const ThemeChangeProvider: React.FC<IThemeChangeProviderProps> = ({children}) => {
+export const ThemeChangeProvider: React.FC<IThemeChangeProvider> = ({children}) => {
   const [darkMode, setDarkMode] = React.useState(true);
-  const toogleDarkMode = () => { 
-    setDarkMode(prevDarkMode => !prevDarkMode)
-  }
+
+  const toogleDarkMode = () => setDarkMode(prevDarkMode => !prevDarkMode)
+  
   return (
     <ThemeChangeContext.Provider value={{
       darkMode,

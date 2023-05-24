@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
-import { DataUser } from '../service/interface';
+import { DataUser } from "../config/interface";
 
 const URL = "https://api.github.com/users";
 
@@ -23,7 +23,7 @@ interface IApi {
 
 interface IApiProviderProps {
   children: React.ReactNode;
-}
+};
 
 export const ApiContext = React.createContext<IApi>({} as IApi, );
 
@@ -44,32 +44,36 @@ export const ApiProvider: React.FC<IApiProviderProps> = ({children}) => {
     })
   .catch(error => alert("usuario nao existe"))
   }
-
+  
   function getRepos(user:any) {
     axios.get(`${URL}/${user}/repos`)
     .then(response => {
-      setRepos(response.data)
+      setRepos(response.data);
     })
   }
+
   function getFollowing(user:any) {
     axios.get(`${URL}/${user}/following`)
     .then(response => {
-      setFollowing(response.data)
+      setFollowing(response.data);
     })
   }
+
   function getFollowers(user:any) {
     axios.get(`${URL}/${user}/followers`)
     .then(response => {
-      setFollowers(response.data)
+      setFollowers(response.data);
     })
   }
+
   function getStars(user:any) {
     axios.get(`${URL}/${user}/starred`)
     .then(response => {
-      setStars(response.data)
-      setStarsNumber(response.data.length)
+      setStars(response.data);
+      setStarsNumber(response.data.length);
     })
   }
+
   function getSeeMore(click:any) {
     switch (click) {
       case repos:
@@ -87,7 +91,7 @@ export const ApiProvider: React.FC<IApiProviderProps> = ({children}) => {
       default:
         break;
     }
-    setSeeMore(click)
+    setSeeMore(click);
   }
   
   return (

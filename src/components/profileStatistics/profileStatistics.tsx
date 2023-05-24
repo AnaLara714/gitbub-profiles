@@ -9,14 +9,10 @@ export const ProfileStatistics: React.FC = () => {
   const {darkMode} = React.useContext(ThemeChangeContext);
   const { user, repos, starsNumber, stars, followers, following, getSeeMore } = React.useContext(ApiContext);
 
-  const SeeMoreRepos = () => 
-      getSeeMore(repos);
-  const SeeMoreFollowers = () => 
-      getSeeMore(followers);
-  const SeeMoreFollowing = () => 
-      getSeeMore(following);
-  const SeeMoreStars = () => 
-      getSeeMore(stars);
+  const SeeMoreRepos = () => getSeeMore(repos);
+  const SeeMoreFollowers = () => getSeeMore(followers);
+  const SeeMoreFollowing = () => getSeeMore(following);
+  const SeeMoreStars = () => getSeeMore(stars);
 
   return (
     <div className={`flex direction-column flex-col p-4 w-52 rounded-lg ${darkMode ? "darkBox" : "lightBox"}`}>

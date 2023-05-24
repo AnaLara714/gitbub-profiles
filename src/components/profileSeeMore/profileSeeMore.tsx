@@ -9,14 +9,13 @@ export const ProfileSeeMore: React.FC = () => {
           seeMore, titleSeeMore, } = React.useContext(ApiContext);
 
   const open = (otherProfile: string) => {
-    console.log(otherProfile)
-    getUser(otherProfile)
-    getUser(otherProfile)
-    getFollowers(otherProfile)
-    getFollowing(otherProfile)
-    getStars(otherProfile)
-    getRepos(otherProfile)
-    getSeeMore("")
+    getUser(otherProfile);
+    getUser(otherProfile);
+    getFollowers(otherProfile);
+    getFollowing(otherProfile);
+    getStars(otherProfile);
+    getRepos(otherProfile);
+    getSeeMore("");
   }
   
   return (

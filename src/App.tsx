@@ -1,20 +1,17 @@
 import React from "react"
-import "./index.css"
+import "../src/assets/css/index.css";
 import { Header } from "./components/header/Header"
 import { Footer } from "./components/footer/Footer";
-// import { InputSearch } from "./components/inputSearch/InputSearch";
 import { Main } from "./components/main/Main";
 import { ThemeChangeContext } from "./context/ThemeChangeContext";
-import { ApiContext, ApiProvider } from "./context/apiContext";
+import { ApiProvider } from "./context/apiContext";
 
 function App() {
   const {darkMode} = React.useContext(ThemeChangeContext);
-  const {seeMore} = React.useContext(ApiContext);
 
   return (
     <div className={`h-full w-full mx-auto p-4 ${darkMode ? "dark" : "light"}`}>
       <Header/>
-      {/* <InputSearch/> */}
       <ApiProvider>
         <Main/>
       </ApiProvider>

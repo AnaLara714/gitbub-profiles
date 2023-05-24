@@ -1,16 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import { ThemeChangeProvider } from './context/ThemeChangeContext'
-import './index.css'
-import { ApiProvider } from './context/apiContext'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { ThemeChangeProvider } from "./context/ThemeChangeContext";
+import "../src/assets/css/index.css";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ThemeChangeProvider>
-    {/* <ApiProvider> */}
       <App />
-      {/* </ApiProvider> */}
     </ThemeChangeProvider>
   </React.StrictMode>,
 )

@@ -15,14 +15,14 @@ export const Main: React.FC = () => {
 
   const SearchUser = () => {
     setresearch(true);
-    getUser(userName)
-    getFollowers(userName)
-    getFollowing(userName)
-    getStars(userName)
-    getRepos(userName)
-    getSeeMore("")
-    setUserName("")
-  }
+    getUser(userName);
+    getFollowers(userName);
+    getFollowing(userName);
+    getStars(userName);
+    getRepos(userName);
+    getSeeMore("");
+    setUserName("");
+  };
   
   return (
     <div className={`${seeMore.length === 0 ? "max-sm:h-max mb-12": "max-sm:h-max lg:h-max md:h-max xl:h-max mb-24"} 
